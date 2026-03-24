@@ -7,7 +7,7 @@
     <meta name="description" content="A relaxed evening of wine and real conversation for singles in Vienna. No awkward speed dating. Just great prompts, good wine, and genuine connection.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
             --wine: #722F37;
@@ -317,56 +317,33 @@
         .prompt-cards {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 2rem;
             flex-wrap: wrap;
-            max-width: 800px;
+            max-width: 1100px;
             margin: 0 auto;
+            align-items: center;
         }
 
         .prompt-card {
-            background: white;
-            border: 1px solid #EDE6DB;
-            border-radius: 12px;
-            padding: 1.8rem 1.5rem;
-            max-width: 230px;
+            max-width: 340px;
             flex: 1;
-            min-width: 200px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
+            min-width: 280px;
+            transition: transform 0.4s ease;
         }
+
+        .prompt-card:nth-child(1) { transform: rotate(-2deg); }
+        .prompt-card:nth-child(2) { transform: rotate(1.5deg); }
+        .prompt-card:nth-child(3) { transform: rotate(-1deg); }
 
         .prompt-card:hover {
-            transform: translateY(-4px) rotate(-1deg);
-            box-shadow: 0 8px 30px rgba(114, 47, 55, 0.08);
+            transform: translateY(-6px) scale(1.03);
+            z-index: 1;
         }
 
-        .prompt-card:nth-child(2):hover {
-            transform: translateY(-4px) rotate(1deg);
-        }
-
-        .prompt-card-emoji {
-            font-size: 1.8rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .prompt-card p {
-            font-family: 'Lora', serif;
-            font-size: 1rem;
-            font-style: italic;
-            color: var(--charcoal);
-            line-height: 1.5;
-        }
-
-        .prompt-card .card-label {
-            font-family: 'DM Sans', sans-serif;
-            font-style: normal;
-            font-size: 0.7rem;
-            font-weight: 500;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--gold);
+        .prompt-card img {
+            width: 100%;
+            height: auto;
             display: block;
-            margin-top: 1rem;
         }
 
         /* How It Works */
@@ -678,7 +655,8 @@
             }
 
             .prompt-card {
-                max-width: 300px;
+                max-width: 340px;
+                transform: rotate(0deg) !important;
             }
 
             .signup-form {
@@ -735,19 +713,13 @@
         <p class="prompt-subtitle">Every round starts with a prompt. Here are a few favourites.</p>
         <div class="prompt-cards">
             <div class="prompt-card">
-                <div class="prompt-card-emoji">&#127758;</div>
-                <p>"If you could live anywhere in the world for a year, where — and would you want company?"</p>
-                <span class="card-label">Warm-up</span>
+                <img src="note-1.svg" alt="Warm-up prompt: If you could live anywhere in the world for a year, where — and would you want company?">
             </div>
             <div class="prompt-card">
-                <div class="prompt-card-emoji">&#127916;</div>
-                <p>"What's a film that changed the way you think about love?"</p>
-                <span class="card-label">Getting deeper</span>
+                <img src="note-2.svg" alt="Getting deeper prompt: What's a film that changed the way you think about love?">
             </div>
             <div class="prompt-card">
-                <div class="prompt-card-emoji">&#128165;</div>
-                <p>"What's the most spontaneous thing you've ever done — and would you do it again?"</p>
-                <span class="card-label">Bold round</span>
+                <img src="note-3.svg" alt="Bold round prompt: What's the most spontaneous thing you've ever done — and would you do it again?">
             </div>
         </div>
     </section>

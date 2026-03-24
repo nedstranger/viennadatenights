@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 280" width="380" height="280">
+  <defs>
+    <filter id="paper2" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" result="noise"/>
+      <feDiffuseLighting in="noise" lighting-color="#f5f0e6" surfaceScale="1.5" result="lit">
+        <feDistantLight azimuth="225" elevation="55"/>
+      </feDiffuseLighting>
+      <feComposite in="SourceGraphic" in2="lit" operator="arithmetic" k1="0.8" k2="0.3" k3="0.1" k4="0"/>
+    </filter>
+    <filter id="shadow2">
+      <feDropShadow dx="3" dy="4" stdDeviation="6" flood-color="#00000025"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow2)" transform="rotate(1.5, 190, 140)">
+    <rect x="10" y="10" width="360" height="260" rx="3" fill="#faf6ed" stroke="#e8e0d0" stroke-width="0.5"/>
+    <line x1="30" y1="70" x2="350" y2="70" stroke="#d8d0c0" stroke-width="0.4" opacity="0.5"/>
+    <line x1="30" y1="105" x2="350" y2="105" stroke="#d8d0c0" stroke-width="0.4" opacity="0.5"/>
+    <line x1="30" y1="140" x2="350" y2="140" stroke="#d8d0c0" stroke-width="0.4" opacity="0.5"/>
+    <line x1="30" y1="175" x2="350" y2="175" stroke="#d8d0c0" stroke-width="0.4" opacity="0.5"/>
+    <line x1="30" y1="210" x2="350" y2="210" stroke="#d8d0c0" stroke-width="0.4" opacity="0.5"/>
+    <text x="30" y="45" font-family="'DM Sans', sans-serif" font-size="11" font-weight="500" letter-spacing="2" fill="#c9a96e">GETTING DEEPER</text>
+    <text font-family="'Caveat', cursive" font-size="26" fill="#3a3530">
+      <tspan x="30" y="98">"What's a film that</tspan>
+      <tspan x="30" y="135">changed the way you</tspan>
+      <tspan x="30" y="172">think about love?"</tspan>
+    </text>
+    <path d="M30,198 Q80,206 130,196" fill="none" stroke="#c9a96e" stroke-width="1.5" opacity="0.5"/>
+  </g>
+</svg>
