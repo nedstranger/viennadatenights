@@ -402,9 +402,13 @@
 
         /* What to Expect */
         .expect {
-            background: linear-gradient(135deg, var(--cream) 0%, #E8E4DC 100%);
+            background: linear-gradient(135deg, #1B3A5C 0%, #243F5C 100%);
             padding: 6rem 2rem;
             position: relative;
+        }
+
+        .expect .section-title {
+            color: #FFFFFF;
         }
 
         .expect-content {
@@ -424,10 +428,10 @@
         .expect-card {
             text-align: left;
             padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border-radius: 12px;
-            border: 1px solid rgba(201, 169, 110, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             transition: transform 0.3s ease;
         }
 
@@ -445,14 +449,14 @@
             font-family: 'Lora', serif;
             font-size: 1.05rem;
             font-weight: 600;
-            color: var(--wine);
+            color: var(--gold-light);
             margin-bottom: 0.4rem;
         }
 
         .expect-card p {
             font-size: 0.88rem;
             font-weight: 300;
-            color: var(--muted);
+            color: rgba(255, 255, 255, 0.75);
             line-height: 1.6;
         }
 
@@ -495,8 +499,12 @@
         .signup {
             padding: 6rem 2rem;
             text-align: center;
-            background: linear-gradient(135deg, var(--cream) 0%, #E8E4DC 100%);
+            background: linear-gradient(135deg, #1B3A5C 0%, #243F5C 100%);
             position: relative;
+        }
+
+        .signup .section-title {
+            color: #FFFFFF;
         }
 
         .signup-content {
@@ -513,7 +521,7 @@
         .signup p {
             font-size: 1.05rem;
             font-weight: 300;
-            color: var(--muted);
+            color: rgba(255, 255, 255, 0.8);
             margin-bottom: 2rem;
             line-height: 1.7;
         }
@@ -531,49 +539,49 @@
             font-family: 'Lora', serif;
             font-size: 0.9rem;
             font-weight: 300;
-            border: 1px solid #DDD5CA;
+            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 50px;
-            background: white;
-            color: var(--charcoal);
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
             outline: none;
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         .signup-form input[type="email"]::placeholder {
-            color: #B5AEA6;
+            color: rgba(255, 255, 255, 0.5);
         }
 
         .signup-form input[type="email"]:focus {
-            border-color: var(--wine);
-            box-shadow: 0 0 0 3px rgba(27, 58, 92, 0.08);
+            border-color: var(--gold-light);
+            box-shadow: 0 0 0 3px rgba(212, 185, 122, 0.2);
         }
 
         .signup-form button {
             padding: 1rem 2rem;
-            background-color: var(--wine);
-            color: var(--cream);
+            background-color: var(--gold);
+            color: #1B3A5C;
             font-family: 'Lora', serif;
             font-size: 0.85rem;
-            font-weight: 500;
+            font-weight: 600;
             letter-spacing: 0.05em;
             border: none;
             border-radius: 50px;
             cursor: pointer;
             white-space: nowrap;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(27, 58, 92, 0.15);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .signup-form button:hover {
-            background-color: var(--wine-light);
+            background-color: var(--gold-light);
             transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(27, 58, 92, 0.25);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
         .form-success {
             display: none;
             font-size: 1.1rem;
-            color: var(--wine);
+            color: var(--gold-light);
             font-weight: 400;
             margin-top: 1.5rem;
         }
@@ -587,7 +595,7 @@
         .signup-note {
             margin-top: 1rem;
             font-size: 0.78rem;
-            color: var(--muted);
+            color: rgba(255, 255, 255, 0.5);
             font-weight: 300;
         }
 
