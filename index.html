@@ -36,6 +36,116 @@
             overflow-x: hidden;
         }
 
+        /* Nav */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            height: 60px;
+            background: rgba(27, 58, 92, 0.95);
+            backdrop-filter: blur(10px);
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .nav.visible {
+            transform: translateY(0);
+        }
+
+        .nav-brand {
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-family: 'Lora', serif;
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #FFFFFF;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: #FFFFFF;
+            border-radius: 1px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .nav-toggle.open span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .nav-toggle.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-toggle.open span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background: rgba(27, 58, 92, 0.98);
+                padding: 1rem 2rem 1.5rem;
+                gap: 0;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 0.75rem 0;
+                font-size: 0.95rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            .nav-links a:last-child {
+                border-bottom: none;
+            }
+        }
+
         /* Floating decorative elements */
         .float-element {
             position: absolute;
@@ -666,6 +776,20 @@
 </head>
 <body>
 
+    <nav class="nav" id="nav">
+        <div class="nav-brand">Dateables</div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="#the-event">The Event</a>
+            <a href="#faqs">FAQs</a>
+            <a href="https://luma.com/wgvohu7t" target="_blank">Tickets</a>
+            <a href="#signup">Newsletter</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
     <section class="hero">
         <div class="hero-content">
             <h1>Great Conversation.<br><em>Real Chemistry.</em></h1>
@@ -704,7 +828,7 @@
         </div>
     </section>
 
-    <section class="how-it-works fade-in">
+    <section class="how-it-works fade-in" id="the-event">
         <h2 class="section-title">How Your Evening Goes</h2>
         <div class="steps">
             <div class="step">
@@ -725,7 +849,7 @@
         </div>
     </section>
 
-    <section class="faq fade-in">
+    <section class="faq fade-in" id="faqs">
         <div class="faq-content">
             <h2 class="section-title">FAQ</h2>
             <div class="faq-list">
@@ -769,7 +893,7 @@
         </div>
     </section>
 
-    <section class="vibe fade-in">
+    <section class="vibe fade-in" id="about">
         <div class="vibe-content">
             <p class="vibe-quote">"We believe the best dates start with a great question and a good glass of wine."</p>
             <p class="vibe-subtext">
@@ -826,6 +950,33 @@
         }, { threshold: 0.15 });
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Nav: show on scroll past hero
+        const nav = document.getElementById('nav');
+        const hero = document.querySelector('.hero');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > hero.offsetHeight * 0.6) {
+                nav.classList.add('visible');
+            } else {
+                nav.classList.remove('visible');
+            }
+        });
+
+        // Mobile toggle
+        const toggle = document.getElementById('nav-toggle');
+        const links = document.getElementById('nav-links');
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('open');
+            links.classList.toggle('open');
+        });
+
+        // Close mobile menu on link click
+        links.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                toggle.classList.remove('open');
+                links.classList.remove('open');
+            });
+        });
     </script>
 
 </body>
