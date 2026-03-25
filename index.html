@@ -412,52 +412,46 @@
         }
 
         .expect-content {
-            max-width: 700px;
+            max-width: 900px;
             margin: 0 auto;
             text-align: center;
         }
 
         .expect-grid {
             list-style: none;
-            margin-top: 2.5rem;
+            margin-top: 3rem;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.25rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
         }
 
-        .expect-card {
-            text-align: left;
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            transition: transform 0.3s ease;
+        .expect-item {
+            text-align: center;
         }
 
-        .expect-card:hover {
-            transform: translateY(-3px);
+        .expect-item svg {
+            width: 36px;
+            height: 36px;
+            stroke: var(--gold-light);
+            fill: none;
+            stroke-width: 1.5;
+            margin-bottom: 1.2rem;
         }
 
-        .expect-card-icon {
-            font-size: 1.6rem;
+        .expect-item strong {
+            display: block;
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #FFFFFF;
             margin-bottom: 0.6rem;
         }
 
-        .expect-card strong {
-            display: block;
-            font-family: 'Lora', serif;
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--gold-light);
-            margin-bottom: 0.4rem;
-        }
-
-        .expect-card p {
-            font-size: 0.88rem;
+        .expect-item p {
+            font-size: 0.9rem;
             font-weight: 300;
-            color: rgba(255, 255, 255, 0.75);
-            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
         }
 
         /* Social Proof / Vibe */
@@ -765,18 +759,18 @@
         <div class="expect-content">
             <h2 class="section-title">What's Included</h2>
             <div class="expect-grid">
-                <div class="expect-card">
-                    <div class="expect-card-icon">&#127863;</div>
-                    <strong>Wine (obviously)</strong>
-                    <p>Curated and included with your ticket — because good conversation deserves a good glass.</p>
+                <div class="expect-item">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 2h8l1 7c0 3.5-2.5 6-5 6s-5-2.5-5-6l1-7z"/><line x1="12" y1="15" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/></svg>
+                    <strong>Wine included</strong>
+                    <p>Curated and included with your ticket — good conversation deserves a good glass.</p>
                 </div>
-                <div class="expect-card">
-                    <div class="expect-card-icon">&#127917;</div>
+                <div class="expect-item">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                     <strong>Conversation prompts</strong>
-                    <p>Fun, surprising questions that skip "so what do you do?" and get to the good stuff.</p>
+                    <p>Fun, surprising questions that skip the small talk and get to the good stuff.</p>
                 </div>
-                <div class="expect-card">
-                    <div class="expect-card-icon">&#9878;&#65039;</div>
+                <div class="expect-item">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     <strong>A balanced room</strong>
                     <p>We keep an even ratio so everyone has a great time. No 30:5 disasters.</p>
                 </div>
