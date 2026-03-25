@@ -274,26 +274,6 @@
             margin-bottom: 1.2rem;
         }
 
-        /* Divider */
-        .divider {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem 2rem;
-        }
-
-        .divider-icon {
-            font-size: 1.2rem;
-            margin: 0 1rem;
-            opacity: 0.6;
-        }
-
-        .divider-line {
-            height: 1px;
-            width: 60px;
-            background-color: var(--gold);
-            opacity: 0.3;
-        }
 
         /* Prompt Preview */
         .prompt-preview {
@@ -350,8 +330,16 @@
         /* How It Works */
         .how-it-works {
             padding: 6rem 2rem;
+            background: linear-gradient(135deg, #1B3A5C 0%, #243F5C 100%);
+        }
+
+        .how-it-works .steps {
             max-width: 900px;
             margin: 0 auto;
+        }
+
+        .how-it-works .section-title {
+            color: #FFFFFF;
         }
 
         .section-title {
@@ -377,7 +365,7 @@
         }
 
         .step:hover {
-            background-color: rgba(253, 246, 236, 0.6);
+            background-color: rgba(255, 255, 255, 0.05);
         }
 
         .step-icon {
@@ -390,13 +378,13 @@
             font-size: 1.15rem;
             font-weight: 600;
             margin-bottom: 0.75rem;
-            color: var(--charcoal);
+            color: #FFFFFF;
         }
 
         .step p {
             font-size: 0.92rem;
             font-weight: 300;
-            color: var(--muted);
+            color: rgba(255, 255, 255, 0.7);
             line-height: 1.65;
         }
 
@@ -716,12 +704,6 @@
         </div>
     </section>
 
-    <div class="divider">
-        <div class="divider-line"></div>
-        <span class="divider-icon">&#127863;</span>
-        <div class="divider-line"></div>
-    </div>
-
     <section class="how-it-works fade-in">
         <h2 class="section-title">How Your Evening Goes</h2>
         <div class="steps">
@@ -786,12 +768,6 @@
             </div>
         </div>
     </section>
-
-    <div class="divider">
-        <div class="divider-line"></div>
-        <span class="divider-icon">&#10024;</span>
-        <div class="divider-line"></div>
-    </div>
 
     <section class="vibe fade-in">
         <div class="vibe-content">
